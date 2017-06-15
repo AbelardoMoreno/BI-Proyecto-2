@@ -1,0 +1,31 @@
+MODELO RELACIONAL
+
+ 
+
+PAIS (cod_pais, nb_pais)
+
+CIUDAD (cod_ciudad, nb_ciudad, cod_pais)
+
+SEDE (cod_sede, nb_sede, cod_ciudad) Ej. (Las Mercedes, El Hatillo, Galipán, Sebucán)
+
+TIPO_EVENTO (cod_tipo_evento, nb_tipo_evento) (Feria, Bazar, Exposición)
+
+EVENTO (cod_evento, nb_evento, fecha_inicio, fecha_fin, descripcion, cod_sede, email, cod_tipo_evento)
+
+TIPO_STAND (cod_tipo_stand, nb_tipo_stand) Ej. (Mínima, Estándar, Máximo/Ajustable)
+
+EVENTO_STAND (cod_evento, cod_tipo_stand, cantidad_estimada, mts2, precio)
+
+CATEGORIA (cod_categoria, nb_categoria) Ej. (Comida, Ropa y Calzado, Deporte, etc)
+
+SUBCATEGORIA (cod_sub_categoria, nb_sub_categoria, cod_categoria) Ej. (Postres y Dulces, Hamburguesas, Ropa de Ninos, Ropa para Damas, etc. )
+
+CLIENTE  (cod_cliente, nb_cliente, ci_rif, teléfono, dirección, email)
+
+CONTRATO (nro_stand, cod_evento, cod_tipo_stand, fecha_alquiler, cod_cliente, mts2, monto, cod_sub_categoria)
+
+VISITANTE (cod_visitante, cedula, nb_visitante, sexo, email)
+
+ENTRADA (nro_entrada, cod_evento, fecha_entrada, hora_entrada, cod_visitante, recomienda_amigo, calificacion, cod_leyenda_estrellas)
+
+LEYENDA_ESTRELLAS (cod_leyenda_estrellas, nb_descripcion) (1.- Malo/2.-Regular/3.-Bueno, 4.-Muy Bueno, 5.-Excelente)
